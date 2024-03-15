@@ -1,0 +1,101 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ---------- HEADER ---------- */
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 3px solid gray;
+}
+
+header .container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+/* ----------- Burger menu ----------- */
+#burger_btn::after {
+    content: "\2630";
+}
+
+#burger_btn.active::after {
+    content: "\292B";
+}
+
+#burger_btn {
+    text-align: center;
+    margin: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#burger_menu {
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
+    top: -1000px;
+}
+
+#burger_menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#burger_menu li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+
+#burger_menu.active {
+    top: 0;
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+    header .main-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    #burger_menu ul{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        border: none;
+    }
+
+    #burger_menu.active {
+        position: relative;
+    }
+}
