@@ -1,0 +1,173 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------- Disposition mobile ----------- */
+
+body {
+    min-height: 100vh;
+    background-image: url(https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+
+/* ----------- Burger menu ----------- */
+#burger_btn::after {
+    content: "\2630";
+}
+
+#burger_btn.active::after {
+    content: "\292B";
+}
+
+#burger_btn {
+    text-align: center;
+    padding: 15px;
+    font-size: 2rem;
+}
+
+#burger_menu {
+    padding: 15px 0;
+    text-align: center;
+    position: absolute;
+    top: -100%;
+}
+
+#burger_menu.active {
+    position: relative;
+}
+
+
+
+/* ---------- HEADER ---------- */
+
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 3px solid gray;
+}
+
+header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+
+/* ---------- MAIN ---------- */
+
+main .container {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    display: block;
+    margin: 35px auto;
+}
+
+main h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+footer.active {
+    position: relative;
+}
+
+
+@media screen and (min-width: 400px) {
+
+    main img {
+        width: 300px;
+        height: 300px;
+        margin: 35px;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    header .container {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 35px;
+    }
+
+    header h1 {
+        border: none;
+    }
+
+    #burger_menu.active {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+
+
+    footer.active {
+        position: fixed;
+    }
+
+
+
+
+    /* 
+
+    
+    main{
+        display: flex;
+        min-height: 60vh;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    main h2{
+        margin-bottom: 100px;
+    }  */
+}
