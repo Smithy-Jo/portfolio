@@ -39,7 +39,8 @@ main img {
     height: 80%;
     border-radius: 50%;
     display: block;
-    margin: 35px auto;
+    margin: 0 auto;
+    margin-bottom: 35px;
 }
 
 main h2 {
