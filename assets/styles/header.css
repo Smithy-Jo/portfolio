@@ -51,10 +51,10 @@ header a {
 }
 
 #burger_menu {
-    padding: 15px 0;
     text-align: center;
-    position: relative;
-    top: -1000px;
+    position: absolute;
+    top: -100%;
+    margin-bottom: 35px;
 }
 
 #burger_menu ul {
@@ -70,6 +70,7 @@ header a {
 
 
 #burger_menu.active {
+    position: relative;
     top: 0;
 }
 
@@ -86,7 +87,7 @@ header a {
         margin-top: 15px;
     }
 
-    #burger_menu ul{
+    #burger_menu ul {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -98,4 +99,19 @@ header a {
     #burger_menu.active {
         position: relative;
     }
+}
+
+@media screen and (min-width: 1500px) {
+    #burger_btn {
+        font-size: 3vw;
+    }
+
+    header h1 {
+        font-size: 3vw;
+    }
+
+    #burger_menu li a {
+        font-size: 2vw;
+    }
+
 }

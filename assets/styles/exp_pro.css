@@ -23,3 +23,188 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+/* ---------- Card slider ---------- */
+
+.slider .job {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.slider .job h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.slider .job img {
+    width: 300px;
+    display: block;
+    border-radius: 15px;
+}
+
+.slider .date {
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+.slider .description-poste {
+    margin: auto 0;
+}
+
+@media screen and (min-width: 400px) {
+
+    .slider .job h2 {
+        font-size: 2rem;
+    }
+
+    .slider .description-poste, .slider .date {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* ---------- Slider ---------- */
+
+main .slider {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: rgba(211, 211, 211, 0.2);
+    border-radius: 15px;
+}
+
+.slider .job {
+    display: none;
+}
+
+.slider .job.active {
+    display: flex;
+    animation: fade 0.8s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container-btn {
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-btn .previous:hover {
+    color: gray;
+}
+
+.container-btn .next:hover {
+    color: gray;
+}
+
+.btn-nav {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+.slider .job {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.slider .job img {
+    width: 300px;
+    display: block;
+    border-radius: 15px;
+}
+
+.slider .date {
+    margin-top: 10px;
+    margin-bottom: auto;
+}
+
+.slider .description-poste {
+    margin: auto 0;
+}
+
+main .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(211, 211, 211, 0.2);
+    border-radius: 15px;
+}
+
+.slider .job {
+    display: none;
+}
+
+.slider .job.active {
+    display: flex;
+    animation: fade 0.8s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container-btn {
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-btn .previous:hover{
+    color: gray;
+}
+.container-btn .next:hover{
+    color: gray;
+}
+
+.btn-nav {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+ */
